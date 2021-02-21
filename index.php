@@ -1,30 +1,17 @@
-<?php
-    $categorias = [];
-    $categorias[] = 'Infantil';
-    $categorias[] = 'Adolescente';
-    $categorias[] = 'Adulto';
-    //print_r($categorias)
-
-    $nome = "Jessica";
-    $idade = 24;
-
-    //var_dump($nome);
-    //var_dump($idade);
-
-    if($idade >= 6 && $idade < 12){
-        for($i = 0; $i <= count($categorias); $i++){
-            if($categorias[$i] == 'Infantil')
-                echo("O nadador $nome compete na categoria $categorias[$i]");
-        }
-    }else if($idade >=12 && $idade < 18){
-        for($i = 0; $i <= count($categorias); $i++){
-            if($categorias[$i] == 'Adolescente')
-                echo("O nadador $nome compete na categoria $categorias[$i]");
-        }
-    } else if($idade >= 18){
-        for($i = 0; $i <= count($categorias); $i++){
-            if($categorias[$i] == 'Adulto')
-                echo("O nadador $nome compete na categoria $categorias[$i]"); 
-        }
-    }
-?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição</title>
+</head>
+<body>
+    <form action="script.php" method="post">
+        <p><label for="nome">Seu nome:</label>
+        <input type="text" name="nome"></p>
+        <p><label for="idade">Seu nome:</label>
+        <input type="number" name="idade"></p>
+        <p><input type="submit" value="Cadastrar"></p>
+    </form>
+</body>
+</html>
