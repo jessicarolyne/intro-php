@@ -24,7 +24,7 @@
     } else if($idade >= 18){
         for($i = 0; $i <= count($categorias); $i++){
             if($categorias[$i] == 'Adulto')
-                echo("O nadador $nome compete na categoria $categorias[$i]");
+                echo("O nadador $nome compete na categoria $categorias[$i]"); 
         }
     }
 ?>
