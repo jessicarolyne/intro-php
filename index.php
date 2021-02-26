@@ -1,5 +1,7 @@
 <?php
-    session_start();
+    include "servicos/servico-mensagem-sessao.php";
+    include "servicos/servico-validacao.php";
+    include "servicos/servicoCategoriaCompetidor.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -16,12 +18,12 @@
         <p><label for="idade">Seu nome:</label>
         <input type="number" name="idade"></p>
         <?php
-            $mensagemdeSucesso = isset($_SESSION["mensagem-de-sucesso"]) ? $_SESSION["mensagem-de-sucesso"] : " ";
+            $mensagemdeSucesso = obterMensagemSucesso();
             if(!empty($mensagemdeSucesso)){
                 echo "<p style='color:green;'>$mensagemdeSucesso</p>";
             }
 
-            $mensagemdeErro = isset($_SESSION["mensagem-de-erro"]) ? $_SESSION["mensagem-de-erro"] : " ";
+            $mensagemdeErro = obterMensagemErro();
             if(!empty($mensagemdeErro)){
                 echo "<p style='color:red;'>$mensagemdeErro</p>";
             }
